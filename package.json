@@ -1,0 +1,27 @@
+{
+  "name": "fall20",
+  "version": "0.0.1",
+  "description": "Read data and publish from weather database",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seattleacademy/fall20.git"
+  },
+  "keywords": [
+    "weather",
+    "station"
+  ],
+  "author": "Gary Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seattleacademy/fall20/issues"
+  },
+  "homepage": "https://github.com/seattleacademy/fall20#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "sqlite3": "^3.1.4"
+  }
+}

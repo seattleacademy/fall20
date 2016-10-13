@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>fall20</title>
+</head>
+
+<body>
+    <div>The inside temperature is <span id="insideTemp">...</span> degrees</div>
+    <table id="myTable">
+        hello
+    </table>
+    <button id="getData">get Data</buutton>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script>
+        function grabData(e) {
+
+            var host = window.document.location.host;
+            //dateTime barometer pressure altimeter inTemp outTemp inHumidity outHumidity
+            //windSpeed windDir windGustDir rainRate rain dewpoint windchill heatindex
+            $.getJSON("http://" + host + "/all", function(json) {
+                console.log("JSON Data:", json.thelist);
+                $("#insideTemp").text(json.inTemp);
+                $("#myTable").last().append("<tr><td>" + json.barometer + "</td></tr>");
+            });
+        }
+
+        $("#getData").click(grabData);
+        </script>
+</body>
+
+</html>
